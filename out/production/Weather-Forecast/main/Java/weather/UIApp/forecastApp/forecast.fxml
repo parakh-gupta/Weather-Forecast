@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" prefHeight="480.0" prefWidth="650.0"
+           stylesheets="@../weatherStyle.css" xmlns="http://javafx.com/javafx/8.0.172-ea"
+           fx:controller="main.java.weather.UIApp.forecastApp.ForecastController">
+    <children>
+        <AnchorPane fx:id="rootAnchorPane">
+            <children>
+                <ImageView fitHeight="487.0" fitWidth="655.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../../../../../resources/background.png"/>
+                    </image>
+                </ImageView>
+                <Pane fx:id="menuBar" prefHeight="35.0" prefWidth="653.0" style="-fx-background-color: #142747;">
+                    <children>
+                        <ImageView fx:id="refreshBtn" fitHeight="20.0" fitWidth="20.0" layoutX="620.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true"/>
+                        <ImageView fx:id="searchIcon" fitHeight="20.0" fitWidth="20.0" layoutX="580.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true"/>
+                    </children>
+                </Pane>
+                <VBox layoutX="73.0" layoutY="52.0" prefHeight="200.0" prefWidth="245.0">
+                    <children>
+                        <Label fx:id="cityNameLbl"/>
+                        <HBox prefHeight="85.0" prefWidth="229.0">
+                            <children>
+                                <ImageView fx:id="weatherIcon" fitHeight="90.0" fitWidth="85.0" pickOnBounds="true"
+                                           preserveRatio="true"/>
+                                <Label fx:id="temperatureLbl"/>
+                                <ImageView fitHeight="46.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../../../../../resources/celsius-scale.png"/>
+                                    <HBox.margin>
+                                        <Insets top="28.0"/>
+                                    </HBox.margin>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <Label fx:id="descriptionLbl"/>
+                    </children>
+                </VBox>
+
+                <Separator layoutX="340.0" layoutY="109.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="3.0"/>
+
+                <GridPane alignment="CENTER" layoutX="386.0" layoutY="65.0" prefHeight="165.0" prefWidth="219.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="110.0" minWidth="8.0" prefWidth="44.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="158.0" minWidth="10.0" prefWidth="71.0"/>
+                        <ColumnConstraints maxWidth="161.0" minWidth="70.0" prefWidth="107.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <ImageView fx:id="windIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                   preserveRatio="true" GridPane.rowIndex="1"/>
+                        <ImageView fx:id="humidityIcon" fitHeight="27.0" fitWidth="30.0" pickOnBounds="true"
+                                   preserveRatio="true" GridPane.rowIndex="2"/>
+                        <ImageView fx:id="pressureIcon" fitHeight="27.0" fitWidth="30.0" pickOnBounds="true"
+                                   preserveRatio="true" GridPane.rowIndex="3"/>
+                        <ImageView fx:id="cloudIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                   preserveRatio="true" GridPane.rowIndex="4"/>
+                        <Label styleClass="valueClass" text="Wind" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label styleClass="valueClass" text="Humidity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Label styleClass="valueClass" text="Pressure" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label styleClass="valueClass" text="Clouds" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Label fx:id="windLbl" alignment="CENTER_LEFT" styleClass="valueClass" GridPane.columnIndex="2"
+                               GridPane.rowIndex="1"/>
+                        <Label fx:id="humidityLbl" alignment="CENTER_LEFT" styleClass="valueClass"
+                               GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                        <Label fx:id="pressureLbl" alignment="CENTER_LEFT" styleClass="valueClass"
+                               GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                        <Label fx:id="cloudLbl" alignment="CENTER_LEFT" styleClass="valueClass" GridPane.columnIndex="2"
+                               GridPane.rowIndex="4"/>
+                    </children>
+                </GridPane>
+                <GridPane layoutX="43.0" layoutY="312.0" prefHeight="138.0" prefWidth="575.0">
+                    <columnConstraints>
+                        <ColumnConstraints/>
+                        <ColumnConstraints maxWidth="120.0" minWidth="10.0" prefWidth="120.0"/>
+                        <ColumnConstraints maxWidth="120.0" minWidth="10.0" prefWidth="120.0"/>
+                        <ColumnConstraints maxWidth="120.0" minWidth="10.0" prefWidth="120.0"/>
+                        <ColumnConstraints maxWidth="120.0" minWidth="10.0" prefWidth="120.0"/>
+                        <ColumnConstraints maxWidth="120.0" minWidth="10.0" prefWidth="120.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0"/>
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="63.0"/>
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="dateLblDay1" styleClass="commonStyle" GridPane.columnIndex="1"/>
+                        <ImageView fx:id="weatherIconDay1" fitHeight="60.0" fitWidth="85.0" opacity="0.8"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="temperatureLblDay1" styleClass="commonStyle" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2"/>
+
+                        <Label fx:id="dateLblDay2" styleClass="commonStyle" GridPane.columnIndex="2"/>
+                        <ImageView fx:id="weatherIconDay2" fitHeight="60.0" fitWidth="85.0" opacity="0.8"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2"
+                                   GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="temperatureLblDay2" styleClass="commonStyle" GridPane.columnIndex="2"
+                               GridPane.rowIndex="2"/>
+
+                        <Label fx:id="dateLblDay3" styleClass="commonStyle" GridPane.columnIndex="3"/>
+                        <ImageView fx:id="weatherIconDay3" fitHeight="60.0" fitWidth="85.0" opacity="0.8"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3"
+                                   GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="temperatureLblDay3" styleClass="commonStyle" GridPane.columnIndex="3"
+                               GridPane.rowIndex="2"/>
+
+                        <Label fx:id="dateLblDay4" styleClass="commonStyle" GridPane.columnIndex="4"/>
+                        <ImageView fx:id="weatherIconDay4" fitHeight="60.0" fitWidth="85.0" opacity="0.8"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4"
+                                   GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="temperatureLblDay4" styleClass="commonStyle" GridPane.columnIndex="4"
+                               GridPane.rowIndex="2"/>
+
+                        <Label fx:id="dateLblDay5" styleClass="commonStyle" GridPane.columnIndex="5"/>
+                        <ImageView fx:id="weatherIconDay5" fitHeight="60.0" fitWidth="85.0" opacity="0.8"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5"
+                                   GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </ImageView>
+                        <Label fx:id="temperatureLblDay5" styleClass="commonStyle" GridPane.columnIndex="5"
+                               GridPane.rowIndex="2"/>
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

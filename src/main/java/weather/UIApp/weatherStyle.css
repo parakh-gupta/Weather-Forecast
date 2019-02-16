@@ -1,0 +1,46 @@
+
+#cityNameLbl {
+-fx-pref-height: 60;
+-fx-pref-width: 230;
+-fx-font-size: 300%;
+-fx-text-fill: "#142747";
+-fx-font-weight: bold;
+}
+
+#descriptionLbl{
+ -fx-font-size: 200%;
+ -fx-pref-width: 250;
+ -fx-pref-height:50;
+ -fx-padding: 5;
+ -fx-text-fill: "#fcfafa";
+ -fx-alignment: "TOP_LEFT";
+ -fx-font-weight: bold;
+}
+
+ #temperatureLbl{
+ -fx-alignment: "CENTER_RIGHT";
+ -fx-pref-height: 71;
+ -fx-pref-width: 81;
+ -fx-padding: 4;
+ -fx-font-size: 66px;
+ -fx-text-fill: "#fcfafa";
+}
+
+.valueClass{
+ -fx-padding: 1;
+ -fx-pref-height: 30;
+ -fx-pref-width: 90;
+ -fx-font-size: 15px;
+ -fx-text-fill: "#fcfafa";
+ -fx-font-weight: bold;
+}
+
+.commonStyle{
+ -fx-pref-width: 100;
+ -fx-pref-height: 25;
+ -fx-padding: 2;
+ -fx-alignment: "CENTER";
+ -fx-text-fill: "#dcdcdc";
+ -fx-font-size: 15px;
+ -fx-opacity: 0.8;
+}
