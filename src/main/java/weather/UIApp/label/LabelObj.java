@@ -30,7 +30,7 @@ public class LabelObj {
     }
 
     public void setLabelObj(ForecastValue f) {
-        setDateLbl(f.getDate());
+        setDateLbl(f.getDateString());
         setIconLbl(f.getWeatherIcon());
         setTempLbl(String.valueOf(f.getMinTemperature() + DegreeCelsius + " / " + f.getMaxTemperature() + DegreeCelsius));
     }

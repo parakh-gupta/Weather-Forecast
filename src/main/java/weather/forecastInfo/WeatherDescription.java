@@ -10,7 +10,6 @@ public abstract class WeatherDescription {
     public static final String Sleet = "sleet";
     public static final String Drizzle = "drizzle";
 
-
     public static final String CloudIcon = "resources/clouds.png";
     public static final String RainIcon = "resources/rain.png";
     public static final String SleetIcon = "resources/sleet.png";

@@ -42,9 +42,13 @@ public class ForecastValue {
         Wind_Speed = wind_Speed;
     }
 
-    public String getDate() {
+    public String getDateString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM d");
         return dateFormat.format(date);
+    }
+
+    public Date getDate() {
+        return date;
     }
 
     public void setDate(Date date) {
@@ -88,7 +92,7 @@ public class ForecastValue {
     }
 
     public void setDescription(String description) {
-        Description = description;
+        Description = description.substring(0, 1).toUpperCase() + description.substring(1);
     }
 
     public String getHumidity() {

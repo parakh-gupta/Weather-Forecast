@@ -10,6 +10,9 @@
     <orderEntry type="library" name="gson-2.2.2" level="project" />
     <orderEntry type="library" name="jfoenix-8.0.2" level="project" />
     <orderEntry type="library" name="org.json" level="project" />
-    <orderEntry type="library" name="controlsfx-8.40.14" level="project" />
+    <orderEntry type="library" name="controlsfx-8.40.141" level="project" />
+    <orderEntry type="library" name="gson-2.2.21" level="project" />
+    <orderEntry type="library" name="jfoenix-8.0.21" level="project" />
+    <orderEntry type="library" name="org.json1" level="project" />
   </component>
 </module>

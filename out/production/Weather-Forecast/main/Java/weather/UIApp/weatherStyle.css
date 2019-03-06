@@ -1,3 +1,13 @@
+#rootPane{
+ -fx-font-family: sans-serif;
+}
+#currentTimeLbl{
+ -fx-pref-height: 45;
+ -fx-pref-width: 250;
+ -fx-font-size: 20px;
+ -fx-text-fill: "#142747";
+ -fx-font-weight: bold;
+}
 
 #cityNameLbl {
 -fx-pref-height: 60;
@@ -13,16 +23,14 @@
  -fx-pref-height:50;
  -fx-padding: 5;
  -fx-text-fill: "#fcfafa";
- -fx-alignment: "TOP_LEFT";
  -fx-font-weight: bold;
 }
 
  #temperatureLbl{
- -fx-alignment: "CENTER_RIGHT";
  -fx-pref-height: 71;
  -fx-pref-width: 81;
  -fx-padding: 4;
- -fx-font-size: 66px;
+ -fx-font-size: 60px;
  -fx-text-fill: "#fcfafa";
 }
 
@@ -43,4 +51,33 @@
  -fx-text-fill: "#dcdcdc";
  -fx-font-size: 15px;
  -fx-opacity: 0.8;
+}
+
+#pane1:hover{
+ -fx-border-color: WHITE;
+}
+
+#pane2:hover{
+ -fx-border-color: WHITE;
+}
+
+#pane3:hover{
+ -fx-border-color: WHITE;
+}
+
+#pane4:hover{
+ -fx-border-color: WHITE;
+}
+
+#pane5:hover{
+ -fx-border-color: WHITE;
+}
+
+.jfx-snackbar-content {
+ -fx-background-color: #323232;
+}
+
+.jfx-snackbar-toast {
+ -fx-alignment: "CENTER";
+ -fx-text-fill: WHITE;
 }
